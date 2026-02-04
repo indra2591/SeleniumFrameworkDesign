@@ -1,0 +1,36 @@
+package biz4group.pages;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class OrderHistoryPage {
+
+	WebDriver driver;
+
+	public OrderHistoryPage(WebDriver driver)
+	{
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(css ="[routerlink*='myorders']")
+	WebElement orderLink;
+
+	@FindBy(xpath="//tr[@class='ng-star-inserted']/td[2]")
+	List<WebElement> orderText;
+
+	public Boolean verifyOrderDisplay(String productName) {
+
+
+
+		orderLink.click();
+		Boolean value= orderText.stream().anyMatch(cartProducts1 -> cartProducts1.getText().equalsIgnoreCase(productName));
+		return value;
+
+	}
+
+}

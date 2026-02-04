@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-02-04T15:25:03 IST" name="Suite" finished-at="2026-02-04T15:25:16 IST" duration-ms="12110">
+    <groups>
+      <group name="ErrorHandling">
+        <method signature="ErrorValidation.submitOrder()[pri:0, instance:biz4group.tests.ErrorValidation@6b927fb]" name="submitOrder" class="biz4group.tests.ErrorValidation"/>
+      </group> <!-- ErrorHandling -->
+      <group name="purchase">
+        <method signature="submitOrder.submitOrder(java.util.HashMap)[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" name="submitOrder" class="biz4group.tests.submitOrder"/>
+      </group> <!-- purchase -->
+    </groups>
+    <test started-at="2026-02-04T15:25:03 IST" name="StandAlone Test" finished-at="2026-02-04T15:25:03 IST" duration-ms="4">
+    </test> <!-- StandAlone Test -->
+    <test started-at="2026-02-04T15:25:03 IST" name="Error Validations Test" finished-at="2026-02-04T15:25:09 IST" duration-ms="5722">
+      <class name="biz4group.tests.ErrorValidation">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:biz4group.tests.ErrorValidation@6b927fb]" started-at="2026-02-04T15:25:03 IST" name="openApplication" finished-at="2026-02-04T15:25:05 IST" duration-ms="1546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="productDisplayError()[pri:0, instance:biz4group.tests.ErrorValidation@6b927fb]" started-at="2026-02-04T15:25:05 IST" name="productDisplayError" finished-at="2026-02-04T15:25:07 IST" duration-ms="2222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productDisplayError -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:biz4group.tests.ErrorValidation@6b927fb]" started-at="2026-02-04T15:25:07 IST" name="closeBrowser" finished-at="2026-02-04T15:25:07 IST" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:biz4group.tests.ErrorValidation@6b927fb]" started-at="2026-02-04T15:25:07 IST" name="openApplication" finished-at="2026-02-04T15:25:08 IST" duration-ms="1039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="submitOrder()[pri:0, instance:biz4group.tests.ErrorValidation@6b927fb]" started-at="2026-02-04T15:25:08 IST" name="submitOrder" finished-at="2026-02-04T15:25:09 IST" duration-ms="792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:biz4group.tests.ErrorValidation@6b927fb]" started-at="2026-02-04T15:25:09 IST" name="closeBrowser" finished-at="2026-02-04T15:25:09 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- biz4group.tests.ErrorValidation -->
+    </test> <!-- Error Validations Test -->
+    <test started-at="2026-02-04T15:25:03 IST" name="Submit Order Test" finished-at="2026-02-04T15:25:16 IST" duration-ms="12110">
+      <class name="biz4group.tests.submitOrder">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:04 IST" name="openApplication" finished-at="2026-02-04T15:25:07 IST" duration-ms="3032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:07 IST" name="submitOrder" data-provider="getData" finished-at="2026-02-04T15:25:10 IST" duration-ms="3133" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Test@123, email=hukowuhu@yopmail.com, productName=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:10 IST" name="closeBrowser" finished-at="2026-02-04T15:25:10 IST" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:10 IST" name="openApplication" finished-at="2026-02-04T15:25:11 IST" duration-ms="972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:11 IST" name="submitOrder" data-provider="getData" finished-at="2026-02-04T15:25:14 IST" duration-ms="2952" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Test@123, email=dasadykege@yopmail.com, productName=ADIDAS ORIGINAL}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:14 IST" name="closeBrowser" finished-at="2026-02-04T15:25:14 IST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:14 IST" name="openApplication" finished-at="2026-02-04T15:25:15 IST" duration-ms="950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="orderHistory()[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:15 IST" name="orderHistory" finished-at="2026-02-04T15:25:16 IST" depends-on-methods="biz4group.tests.submitOrder.submitOrder" duration-ms="641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistory -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:biz4group.tests.submitOrder@34b7ac2f]" started-at="2026-02-04T15:25:16 IST" name="closeBrowser" finished-at="2026-02-04T15:25:16 IST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- biz4group.tests.submitOrder -->
+    </test> <!-- Submit Order Test -->
+  </suite> <!-- Suite -->
+</testng-results>
