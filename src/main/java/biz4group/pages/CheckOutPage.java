@@ -1,11 +1,15 @@
 package biz4group.pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckOutPage {
 	WebDriver driver;
@@ -40,9 +44,28 @@ public class CheckOutPage {
 		selectCountryButton.click();
 	}
 	
+	private void waitForOverlaysToDisappear(WebDriver driver) {
+	    WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+	    try {
+	        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".ng-animating")));
+	    } catch (Exception ignored) {}
+	    try {
+	        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".ngx-spinner-overlay")));
+	    } catch (Exception ignored) {}
+	    try {
+	        Thread.sleep(300); // Small buffer for UI to settle
+	    } catch (InterruptedException ignored) {}
+	}
+	
 	public void placeHolder() {
-		placeOrderButton.click();
-		String orderMessageText = orderMessage.getText();
+	    // Scroll element into view and wait for clickable
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", placeOrderButton);
+	    WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+	    wait.until(ExpectedConditions.elementToBeClickable(placeOrderButton));
+	    waitForOverlaysToDisappear(driver);
+	    placeOrderButton.click();
+	    String orderMessageText = orderMessage.getText();
 		
 		
 	}

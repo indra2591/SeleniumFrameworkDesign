@@ -2,7 +2,10 @@ package biz4group.tests;
 
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -33,7 +36,7 @@ public class ErrorValidation extends BaseTest {
 			cartPage.goToCartPage();
 			Boolean match = cartPage.verifyProductDisplay("ZARA COAT 33");
 			Assert.assertFalse(match);
+			// Wait for overlays before click (if any direct click is used)
 	  }
 	  
 	  }
-	  
