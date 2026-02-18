@@ -2,10 +2,14 @@ package biz4group.tests;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+=======
+import org.openqa.selenium.WebElement;
+>>>>>>> 2753853cb3795315e659cb11787dd4a592f2a519
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -36,7 +40,14 @@ public class ErrorValidation extends BaseTest {
 			cartPage.goToCartPage();
 			Boolean match = cartPage.verifyProductDisplay("ZARA COAT 33");
 			Assert.assertFalse(match);
+<<<<<<< HEAD
 			// Wait for overlays before click (if any direct click is used)
 	  }
 	  
 	  }
+=======
+	  }
+	  
+	  }
+	  
+>>>>>>> 2753853cb3795315e659cb11787dd4a592f2a519
