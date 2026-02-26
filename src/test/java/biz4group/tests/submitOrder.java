@@ -61,8 +61,4 @@ public class submitOrder extends BaseTest {
 	    
 	    
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2753853cb3795315e659cb11787dd4a592f2a519
