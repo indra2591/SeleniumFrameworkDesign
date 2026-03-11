@@ -160,11 +160,17 @@ public abstract class BaseTest {
 		
 		public String getScreenshot(String testCaseName, WebDriver driver) throws IOException
 	    {
+	    	String reportsDir = System.getProperty("user.dir") + File.separator + "reports";
+	    	File dir = new File(reportsDir);
+	    	if (!dir.exists()) {
+	    		dir.mkdirs();
+	    	}
 	    	TakesScreenshot ts = (TakesScreenshot)driver;
 	    	File source = ts.getScreenshotAs(OutputType.FILE);
-	    	File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
+	    	String destPath = reportsDir + File.separator + testCaseName + ".png";
+	    	File file = new File(destPath);
 	    	FileUtils.copyFile(source, file);
-	    	return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
+	    	return destPath;
 	    }
 	
 	
